@@ -8,6 +8,8 @@ const port = 8000
 
 app.set("view engine","ejs");
 
+app.use(expresss.urlencoded({extended: true})); // body parser to help handle form sumbissions
+
 //imports my routes from main.js and allows it to be used in my thirsty app
 const mainRoutes = require("./routes/main");
 app.use("/",mainRoutes);
