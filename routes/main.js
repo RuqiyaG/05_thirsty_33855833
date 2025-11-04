@@ -21,5 +21,13 @@ router.get("/search_result",function (req, res) {  //this will search the databa
     res.send(req.query);
 });
 
+router.get("/register",(req,res)=>{
+    res.render("register.ejs", shopData)
+});
+
+router.post("/registered",(req,res)=>{
+    res.send(req.body)
+});
+
 //this exports the router object so other files can use it
 module.exports = router
