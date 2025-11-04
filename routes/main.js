@@ -33,7 +33,7 @@ router.get("/survey",(req,res)=>{
     res.render("survey.ejs",shopData);
 });
 
-router.post("/surveyquestions",(req,res)=>{
+router.post("/surveyquestion",(req,res)=>{
     res.send("Thank you for submitting! :) ");
 });
 
