@@ -2,7 +2,7 @@ const express = require("express"); // this imports the express module and makes
 const router = express.Router();
 
 // defines and assigns shop name so that it can be used anyhwere in my html code
-var shopData = {shopName: "The Thirsty Student", productCategories:["Beer", "Wine", "Soft Drink", "Milkshake", "Hot Drinks" ]};
+var shopData = {shopName: "The Thirsty Student", productCategories:["Beer", "Wine", "Soft Drinks", "Milkshake", "Hot Drinks" ]};
 
 // My route handlers so that each path is made and can be accesed
 router.get("/", function(req, res) {
