@@ -17,8 +17,8 @@ router.get("/search",(req,res)=>{
     res.render("search.ejs")
 });
 
-router.get("/test", (req, res) => {
-    res.send("Test route is working!");
+router.get("/search_result",function (req, res) {  //this will search the database for the item
+    res.send(req.query);
 });
 
 //this exports the router object so other files can use it
