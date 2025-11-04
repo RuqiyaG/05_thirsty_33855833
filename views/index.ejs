@@ -10,11 +10,17 @@
     <!-- <h1>Welcome to the Thirsty Student Shop</h1> -->  <h1>WElcome to <%= shopName %> Shop</h1>  
     <h2>Here are some things we sell:</h2>
     <ul>
-        <li>Beer</li>
+        <!-- <li>Beer</li>
         <li>Wine</li>
         <li>Soft Drinks</li>
         <li>Milkshakes</li>
-        <li>Hot Drinks</li>
+        <li>Hot Drinks</li> -->
+
+        <% for(let i = 0; i<productCategories.length; i++){ %>
+          <li><%= productCategories[i] %></li>
+          <% } %>
+
+
     </ul>
 </body>
 </html>
