@@ -10,11 +10,11 @@ router.get("/", function(req, res) {
 });
 
 router.get("/about",(req,res)=>{
-    res.render("about.ejs")
+    res.render("about.ejs");
 });
 
 router.get("/search",(req,res)=>{
-    res.render("search.ejs")
+    res.render("search.ejs");
 });
 
 router.get("/search_result",function (req, res) {  //this will search the database for the item
@@ -22,11 +22,11 @@ router.get("/search_result",function (req, res) {  //this will search the databa
 });
 
 router.get("/register",(req,res)=>{
-    res.render("register.ejs", shopData)
+    res.render("register.ejs", shopData);
 });
 
 router.post("/registered",(req,res)=>{
-    res.send(req.body)
+    res.send('Hello'+req.body.first +''+req.body.last+'you are registered!');
 });
 
 //this exports the router object so other files can use it
