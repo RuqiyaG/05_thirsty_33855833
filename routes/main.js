@@ -29,5 +29,13 @@ router.post("/registered",(req,res)=>{
     res.send('Hello    '+req.body.first +'  '+req.body.last+'    you are registered!');
 });
 
+router.get("/survey",(req,res)=>{
+    res.render("survey.ejs",shopData);
+});
+
+router.post("/surveyquestions",(req,res)=>{
+    res.send("Thank you for submitting! :) ");
+});
+
 //this exports the router object so other files can use it
 module.exports = router
