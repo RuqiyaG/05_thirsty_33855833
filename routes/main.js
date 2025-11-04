@@ -1,10 +1,11 @@
-const express = require("express");
+const express = require("express"); // this imports the express module and makes the router object
 const router = express.Router();
 
-var shopData = {shopName: "The Thirsty Student"};
+// defines and assigns shop name so that it can be used anyhwere in my html code
+var shopData = {shopName: "The Thirsty Student", productCategories:["Beer", "Wine", "Soft Drink", "Milkshake", "Hot Drinks" ]};
 
+// My route handlers so that each path is made and can be accesed
 router.get("/", function(req, res) {
-    console.log(shopData);
     res.render("index.ejs", shopData);
 });
 
@@ -20,5 +21,5 @@ router.get("/test", (req, res) => {
     res.send("Test route is working!");
 });
 
-
+//this exports the router object so other files can use it
 module.exports = router
