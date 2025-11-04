@@ -18,7 +18,7 @@ router.get("/search",(req,res)=>{
 });
 
 router.get("/search_result",function (req, res) {  //this will search the database for the item
-    res.send(req.query);
+    res.send("You searched for  "+req.query.search_text+" in  "+req.query.category);
 });
 
 router.get("/register",(req,res)=>{
@@ -26,7 +26,7 @@ router.get("/register",(req,res)=>{
 });
 
 router.post("/registered",(req,res)=>{
-    res.send('Hello'+req.body.first +''+req.body.last+'you are registered!');
+    res.send('Hello    '+req.body.first +'  '+req.body.last+'    you are registered!');
 });
 
 //this exports the router object so other files can use it
